@@ -180,7 +180,7 @@ bar {
         status_command i3status
 }
 
-bindsym $mod+shift+x exec i3lock --color "$bg-color"
+bindsym $mod+shift+x exec i3lock-fancy -t "kak ger"
 #bindsym $mod+shift+x exec /home/hrag/scripts/lock.sh
 
 # Pulse Audio controls
@@ -193,7 +193,8 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh
+# toggle touchpad
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -205,4 +206,3 @@ exec_always nm-applet
 exec_always chromium
 exec_always feh --bg-scale /home/hrag/Pictures/wallpaper.jpg
 exec_always compton -f
-
