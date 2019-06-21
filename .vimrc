@@ -1,3 +1,5 @@
+so ~/.vim/plugins.vim
+
 no <down> <Nop>
 no <left> <Nop>
 no <right> <Nop>
