@@ -30,7 +30,7 @@ bindsym $mod+Shift+q kill
 # start rofi
 bindsym $mod+d exec rofi -show run
 
-#start thunar
+# start thunar
 bindsym $mod+t exec thunar
 
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -180,7 +180,7 @@ bar {
         status_command i3status
 }
 
-bindsym $mod+shift+x exec i3lock-fancy -t "kak ger"
+bindsym $mod+shift+x exec i3lock-fancy -t "kak ger" -f 'Display San Francisco 20'
 #bindsym $mod+shift+x exec /home/hrag/scripts/lock.sh
 
 # Pulse Audio controls
@@ -206,3 +206,4 @@ exec_always nm-applet
 exec_always chromium
 exec_always feh --bg-scale /home/hrag/Pictures/wallpaper.jpg
 exec_always compton -f
+exec_always xset s off -dpms
