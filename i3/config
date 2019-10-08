@@ -33,6 +33,9 @@ bindsym $mod+d exec rofi -show run
 # start thunar
 bindsym $mod+t exec thunar
 
+# screenshot
+bindsym $mod+shift+p exec scrot ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.jpg
+
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
@@ -92,7 +95,7 @@ bindsym $mod+a focus parent
 set $ws1 "1. Browser"
 set $ws2 "2. Terminals"
 set $ws3 "3. VSCode"
-set $ws4 "4"
+set $ws4 "4. Postman"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -126,6 +129,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 assign [class="Chromium"] $ws1
 assign [class="code-oss"] $ws3
+assign [class="Postman"] $ws4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -180,7 +184,7 @@ bar {
         status_command i3status
 }
 
-bindsym $mod+shift+x exec i3lock-fancy -t "kak ger" -f 'Display San Francisco 20'
+bindsym $mod+shift+x exec i3lock-fancy -t "Fuck Off" -f 'Display San Francisco 20'
 #bindsym $mod+shift+x exec /home/hrag/scripts/lock.sh
 
 # Pulse Audio controls
@@ -204,6 +208,6 @@ bindsym XF86AudioPrev exec playerctl previous
 
 exec_always nm-applet
 exec_always chromium
-exec_always feh --bg-scale /home/hrag/Pictures/wallpaper.jpg
+exec_always feh --bg-scale /home/hrag/Pictures/wallpapers/synth-biker.jpg
 exec_always compton -f
 exec_always xset s off -dpms
