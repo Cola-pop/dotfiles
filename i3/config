@@ -127,9 +127,9 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-assign [class="Chromium"] $ws1
-assign [class="code-oss"] $ws3
-assign [class="Postman"] $ws4
+#assign [class="Chromium"] $ws1
+#assign [class="code-oss"] $ws3
+#assign [class="Postman"] $ws4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -180,9 +180,9 @@ set $urgent-bg-color     #E53935
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+#bar {
+#        status_command i3status
+#}
 
 bindsym $mod+shift+x exec i3lock-fancy -t "Fuck Off" -f 'Display San Francisco 20'
 #bindsym $mod+shift+x exec /home/hrag/scripts/lock.sh
@@ -207,7 +207,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 exec_always nm-applet
-exec_always chromium
-exec_always feh --bg-scale /home/hrag/Pictures/wallpapers/synth-biker.jpg
+exec_always feh --bg-scale /home/hrag/Pictures/wallpapers/firewatch.jpg
 exec_always compton -f
 exec_always xset s off -dpms
+exec_always polybar rambo
