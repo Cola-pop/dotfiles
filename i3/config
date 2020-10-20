@@ -139,10 +139,10 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 exec_always nm-applet
-exec_always feh --bg-scale /home/hrag/Pictures/Wallpaper/cyberpunk1.jpg
+exec_always polybar rambo
 exec_always compton -f
 exec_always xset s off -dpms
-exec_always polybar rambo
+exec_always feh --bg-scale /home/hrag/Pictures/Wallpaper/cyberpunk1.jpg
 
 for_window [class="^.*"] border pixel 2
 gaps inner 10
@@ -192,3 +192,24 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+workspace $ws1 output LVDS-1
+workspace $ws2 output LVDS-1
+workspace $ws3 output LVDS-1
+workspace $ws4 output LVDS-1
+workspace $ws5 output LVDS-1
+workspace $ws6 output LVDS-1
+workspace $ws7 output LVDS-1
+workspace $ws8 output LVDS-1
+workspace $ws9 output VGA-1
+workspace $ws10 output VGA-1
+
+# add VGA monitor when connected
+#exec_always xrandr --output VGA-1 --left-of LVDS-1
+#exec_always xrandr --output LVDS-1 --auto
+#bindsym %mod+m exec xrandr --output VGA-1 --left-of LVDS-1
+#bindsym $mod+m exec --no-startup-id xrandr --output VGA-1 --auto --left-of LVDS-1
+#bindsym $mod+m exec xrandr --output LVDS-1 --mode 1600x900
+#exec_always xrandr --output LVDS-1 --mode 1600x900
+#exec_always feh --bg-scale /home/hrag/Pictures/Wallpaper/cyberpunk1.jpg
+
