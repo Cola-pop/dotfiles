@@ -122,7 +122,7 @@ set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
-bindsym $mod+shift+x exec i3lock-fancy -t "ST4Y 0UT" -f 'Display San Francisco 20'
+bindsym $mod+shift+x exec i3lock-fancy -t "Locked" -f 'Display San Francisco 20'
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
