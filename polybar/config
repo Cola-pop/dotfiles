@@ -1,6 +1,6 @@
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #01002e
+background = #5001002e
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -11,7 +11,7 @@ alert = #bd2c40
 
 [bar/rambo]
 ;monitor = ${env:MONITOR:HDMI-1}
-bottom = true
+top: true
 width = 100%
 height = 27
 ;offset-x = 0%
