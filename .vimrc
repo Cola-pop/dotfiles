@@ -1,15 +1,10 @@
-so ~/.vim/plugins.vim
+call plug#begin('~/.vim/plugged')
 
-no <down> <Nop>
-no <left> <Nop>
-no <right> <Nop>
-no <up> <Nop>
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#tab_width = 2
+let g:prettier#config#use_tabs = 'false'
 
-ino <down> <Nop>
-ino <left> <Nop>
-ino <right> <Nop>
-ino <up> <Nop>
+Plug 'preservim/nerdtree'
 
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
+call plug#end()
