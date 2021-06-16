@@ -14,4 +14,6 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 
 Plug 'vim-syntastic/syntastic'
 
+Plug 'tmsvg/pear-tree'
+
 call plug#end()
