@@ -4,7 +4,8 @@ font pango:System San Fransisco Display 10
 
 floating_modifier $mod
 
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec terminator
 
 bindsym $mod+Shift+q kill
 
@@ -122,7 +123,7 @@ set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
-bindsym $mod+shift+x exec i3lock-fancy -t "Locked" -f 'Display San Francisco 20'
+bindsym $mod+shift+x exec i3lock-fancy -t "Eyy, only Hrag can control this" -f 'Display San Francisco 20'
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
@@ -142,7 +143,7 @@ exec_always nm-applet
 exec_always polybar rambo
 exec_always compton -f
 exec_always xset s off -dpms
-exec_always feh --bg-scale /home/hrag/Pictures/Wallpaper/cyberpunk1.jpg
+exec_always feh --bg-scale /home/hrag/Pictures/Wallpapers/synthcity.jpg
 
 for_window [class="^.*"] border pixel 2
 gaps inner 10
@@ -211,5 +212,4 @@ workspace $ws10 output VGA-1
 #bindsym $mod+m exec --no-startup-id xrandr --output VGA-1 --auto --left-of LVDS-1
 #bindsym $mod+m exec xrandr --output LVDS-1 --mode 1600x900
 #exec_always xrandr --output LVDS-1 --mode 1600x900
-#exec_always feh --bg-scale /home/hrag/Pictures/Wallpaper/cyberpunk1.jpg
-
+#exec_always feh --bg-scale /home/hrag/Pictures/Wallpapers/chill1.jpg
