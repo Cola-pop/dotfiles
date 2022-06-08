@@ -14,6 +14,15 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 
 Plug 'vim-syntastic/syntastic'
 
-Plug 'tmsvg/pear-tree'
+Plug 'itchyny/lightline.vim'
+let g:lightline = {
+      \ 'colorscheme': 'powerlineish',
+      \ }
+
+Plug 'terryma/vim-multiple-cursors'
+
+Plug 'tpope/vim-surround'
+
+Plug 'dense-analysis/ale'
 
 call plug#end()
