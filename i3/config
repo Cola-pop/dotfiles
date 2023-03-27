@@ -4,10 +4,8 @@ font pango:System San Fransisco Display 10
 
 floating_modifier $mod
 
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
-bindsym $mod+b split h
-bindsym $mod+v split v
 
 bindsym $mod+d exec rofi -show run
 bindsym $mod+t exec thunar
@@ -31,6 +29,9 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+bindsym $mod+b split h
+bindsym $mod+v split v
+
 bindsym $mod+f fullscreen toggle
 
 bindsym $mod+s layout stacking
@@ -45,9 +46,9 @@ bindsym $mod+a focus parent
 
 #bindsym $mod+d focus child
 
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3t"
+set $ws1 "1. Browser"
+set $ws2 "2. Terminals"
+set $ws3 "3. VSCode"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -138,7 +139,7 @@ exec_always nm-applet
 exec_always polybar rambo
 exec_always compton -f
 exec_always xset s off -dpms
-exec_always feh --bg-scale /home/hrag/Pictures/Wallpapers/2.jpg
+exec_always feh --bg-scale /home/hrag/Pictures/Wallpapers/desertsunset.jpg
 
 for_window [class="^.*"] border pixel 2
 gaps inner 10
@@ -207,4 +208,4 @@ workspace $ws10 output VGA-1
 #bindsym $mod+m exec --no-startup-id xrandr --output VGA-1 --auto --left-of LVDS-1
 #bindsym $mod+m exec xrandr --output LVDS-1 --mode 1600x900
 #exec_always xrandr --output LVDS-1 --mode 1600x900
-#exec_always feh --bg-scale /home/hrag/Pictures/Wallpapers/1.jpg
+#exec_always feh --bg-scale /home/hrag/Pictures/Wallpapers/chill1.jpg
