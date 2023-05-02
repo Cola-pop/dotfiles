@@ -2,6 +2,7 @@
 # ~/.bashrc
 #
 
+# If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
@@ -12,6 +13,7 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export jekyll=$HOME/.gem/ruby/2.7.0/bin
 
 source "$HOME/.cargo/env"
 
@@ -23,5 +25,15 @@ source "$HOME/.cargo/env"
 #     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 # fi
 
-pfetch
+#pfetch
 #fish
+. "$HOME/.cargo/env"
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+echo "\[T]/"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
